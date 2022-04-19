@@ -1,6 +1,7 @@
 import QtQuick 2.12
 import DigitalCluster 1.0
-
+import "cluster"
+import "controlPanel"
 
 Item {
     id: item1
