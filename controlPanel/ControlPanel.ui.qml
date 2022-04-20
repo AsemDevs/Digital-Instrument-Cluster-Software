@@ -1,12 +1,13 @@
 import QtQuick 2.8
 import QtQuick.Studio.Components 1.0
 import DigitalCluster 1.0
-
+import "btns.js" as Logic
 Rectangle {
     id: controlPanel
     width: 1920
     height: 100
     color: "#0C0F16"
+    focus: true
     property alias buttonsModesState: buttonsModes.state
 
     CPbutton {
@@ -59,11 +60,6 @@ Rectangle {
             labelText: "battery"
             buttonState: "center"
             state: Car3dControl.viewState === "battery" ? "on" : "off"
-
-            Connections {
-                target: buttonBattery.mouseArea
-                onClicked: Car3dControl.viewState = "battery"
-            }
         }
 
         CPbutton {
@@ -75,11 +71,6 @@ Rectangle {
             labelText: "interior"
             buttonState: "center"
             state: Car3dControl.viewState === "interior" ? "on" : "off"
-
-            Connections {
-                target: buttonAmbient.mouseArea
-                onClicked: Car3dControl.viewState = "interior"
-            }
         }
 
         CPbutton {
@@ -137,6 +128,16 @@ Rectangle {
         x: 1069
         y: 26
         visible: Car3dControl.viewState === "interior"
+    }
+
+     Keys.onPressed: {
+      switch (event.key) {
+        case Qt.Key_B:
+            Logic.activateBattery()
+        break;
+        case Qt.Key_A:
+            Logic.activateInterior()
+      }
     }
 }
 
