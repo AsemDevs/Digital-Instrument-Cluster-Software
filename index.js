@@ -8,14 +8,14 @@
     - Digit2 > turn on and off when pressed > Asset44.png
     - Digit3 > turn on and off when pressed > Asset42.png
     - Digit4 > turn on and off when pressed > Asset51.png
-    - KeyH > turn on and off when pressed > High_Beam.png
+    - [x] KeyH > turn on and off when pressed > High_Beam.png
     - KeyL > turn on and off when pressed > Asset18.png
     - Also if the status is Turned on Asset 18 should be blink up to the turned off!
     - Digit5 > turn on and off when pressed > Asset39.png
     - Digit6 > turn on and off when pressed > Asset32.png
     - Digit7 > turn on and off when pressed > Asset40.png
     - Digit8 > turn on and off when pressed > Asset30.png
-    - KeyY > turn on and off when pressed > Low_Beam.png
+    - [x] KeyY > turn on and off when pressed > Low_Beam.png
     - KeyR > turn on and off when pressed > Asset34.png
     - Also if the status is Turned on Asset 34 should be blink up to the turned off!
     - KeyE > turn on and off when pressed > Asset51.png
@@ -32,7 +32,7 @@
     - KeyN > Arc should reduce the Gauge ARC and numerical values
     - KeyJ > Arc should be grown from Half of the Gauge To Right origin
     - KeyK > Arc should reduce the Gauge ARC and numerical values.
-    -if  KeyZ > Gear Should be "D"
+    - if KeyZ > Gear Should be "D"
     - KeyX > Gear Should be "N"
     - KeyC > Gear Should be "R"
     - KeyV > Gear Should be "P"

@@ -8,26 +8,18 @@ Rectangle {
     height: 100
     color: "#0C0F16"
     focus: true
-    property alias buttonsModesState: buttonsModes.state
+    // property alias buttonsModesState: buttonsModes.state
 
-    CPbutton {
-        id: buttonPower
-        x: 1753
-        y: 26
-        width: 120
-        height: 50
-        iconSource: "assets/icon-power.svg"
-    }
 
     ButtonsLight {
         id: lights
         x: 161
         y: 26
-    }
+    } 
 
     GroupItem {
         id: views
-        x: 442
+        x: 650
         y: 26
 
         CPbutton {
@@ -39,16 +31,6 @@ Rectangle {
             labelText: "adas"
             buttonState: "left"
             state: Car3dControl.viewState === "adas" ? "on" : "off"
-
-            Connections {
-                target: buttonAdas.mouseArea
-                onClicked: {
-                    Car3dControl.viewState = "adas"
-                    Car3dControl.driverDoorOpen = false
-                    Car3dControl.passengerDoorOpen = false
-                    Car3dControl.trunkOpen = false
-                }
-            }
         }
 
         CPbutton {
@@ -96,25 +78,8 @@ Rectangle {
             height: 50
             buttonState: "right"
             labelText: "lights"
-            Connections {
-                target: buttonLights.mouseArea
-                onClicked: Car3dControl.viewState = "front"
-            }
             state: Car3dControl.viewState === "front" ? "on" : "off"
         }
-    }
-
-    ButtonsModes {
-        id: buttonsModes
-        x: 1471
-        y: 26
-    }
-
-    ButtonsDoors {
-        id: buttonsDoors
-        x: 1069
-        y: 26
-        visible: Car3dControl.viewState !== "interior"
     }
 
     FpsItem {
@@ -123,20 +88,25 @@ Rectangle {
         y: 50
     }
 
-    ButtonsInteriorLight {
-        id: buttonsInteriorLight
-        x: 1069
-        y: 26
-        visible: Car3dControl.viewState === "interior"
-    }
-
      Keys.onPressed: {
       switch (event.key) {
-        case Qt.Key_B:
-            Logic.activateBattery()
+        case Qt.Key_F1:
+            Logic.activateAdas("adas")
         break;
-        case Qt.Key_A:
-            Logic.activateInterior()
+        case Qt.Key_F2:
+            Logic.activateBattery("battery")
+        break;
+        case Qt.Key_F3:
+            Logic.activateInterior("interior")
+        break;
+        case Qt.Key_H:
+            Logic.activateHighBeam("front")
+        break;
+        case Qt.Key_Y:
+            Logic.activateLowBeam("front")
+        break;
+        case Qt.Key_1:
+            Logic.activateAsset41()
       }
     }
 }
