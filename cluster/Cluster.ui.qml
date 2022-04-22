@@ -10,6 +10,7 @@ Item {
     width: 1920
     height: 720
 
+
     Item {
         id: background
         anchors.fill: parent
@@ -100,10 +101,8 @@ Item {
         
         if (indicator.opacity == 0.2 ) {
             indicator.opacity = 1;
-            indicator.focus = true;
         } else {
             indicator.opacity = 0.2;
-            indicator.focus = true;
         }
     }
 
@@ -115,7 +114,7 @@ Item {
 
     GroupItem {
         id: indicatorsTR
-        x: 1250
+        x: 1050
 
         Image {
             id: indicator39
@@ -193,6 +192,25 @@ Item {
                 }
             }
         }
+        Image {
+            id: indicator34
+            x: 440
+            y: 10
+            height: 30
+            width: 30
+            source: "assets/Asset 34.png"
+            Keys.onPressed: {
+                if (event.key == Qt.Key_R) {
+                    toggle(indicator34)
+                    releaseSwitch(indicator34)
+                }
+            }
+            MouseArea { anchors.fill: parent;
+                onClicked: {
+                    indicator34.focus = true
+                }
+            }
+        }
     }
     GroupItem {
         id: indicatorsTL
@@ -255,22 +273,163 @@ Item {
                 }
             }
         }
+
+    }
+
+        GroupItem {
+        id: indicatorsBRs
+        x: 650
+        y: 650
         Image {
             id: indicator51
-            x: 560
+            x: 740
             y: 10
             height: 30
             width: 30
-            source: "assets/Asset51.png"
+            source: "assets/Asset 51.png"
             Keys.onPressed: {
-                if (event.key == Qt.Key_4) {
+                if (event.key == Qt.Key_E) {
                     toggle(indicator51)
+                    console.log("indicator51")
                     releaseSwitch(indicator51)
+                }
+            }
+            MouseArea {
+                onClicked: {
+                    indicator51.focus = true
+                }
+            }
+        }
+        Image {
+            id: indicator50
+            x: 800
+            y: 10
+            height: 30
+            width: 30
+            source: "assets/Asset 50.png"
+            Keys.onPressed: {
+                if (event.key == Qt.Key_F) {
+                    toggle(indicator50)
+                    releaseSwitch(indicator50)
                 }
             }
             MouseArea { anchors.fill: parent;
                 onClicked: {
-                    indicator51.focus = true
+                    indicator50.focus = true
+                }
+            }
+        }
+        Image {
+            id: indicator38
+            x: 860
+            y: 10
+            height: 30
+            width: 30
+            source: "assets/Asset 38.png"
+            Keys.onPressed: {
+                if (event.key == Qt.Key_T) {
+                    toggle(indicator38)
+                    releaseSwitch(indicator38)
+                }
+            }
+            MouseArea { anchors.fill: parent;
+                onClicked: {
+                    indicator38.focus = true
+                }
+            }
+        }
+        Image {
+            id: indicator49
+            x: 920
+            y: 10
+            height: 30
+            width: 30
+            source: "assets/Asset 49.png"
+            Keys.onPressed: {
+                if (event.key == Qt.Key_Y) {
+                    toggle(indicator49)
+                    releaseSwitch(indicator49)
+                }
+            }
+            MouseArea { anchors.fill: parent;
+                onClicked: {
+                    indicator49.focus = true
+                }
+            }
+        }
+        Image {
+            id: indicator46
+            x: 980
+            y: 10
+            height: 30
+            width: 30
+            source: "assets/Asset 46.png"
+            Keys.onPressed: {
+                if (event.key == Qt.Key_U) {
+                    toggle(indicator46)
+                    releaseSwitch(indicator46)
+                }
+            }
+            MouseArea { anchors.fill: parent;
+                onClicked: {
+                    indicator46.focus = true
+                }
+            }
+        }
+        Image {
+            id: indicator45
+            x: 1040
+            y: 10
+            height: 30
+            width: 30
+            source: "assets/Asset 45.png"
+            Keys.onPressed: {
+                if (event.key == Qt.Key_I) {
+                    toggle(indicator45)
+                    releaseSwitch(indicator45)
+                }
+            }
+            MouseArea { anchors.fill: parent;
+                onClicked: {
+                    indicator45.focus = true
+                }
+            }
+        }
+        Image {
+            id: indicator48
+            x: 1100
+            y: 10
+            height: 30
+            width: 30
+            source: "assets/Asset 48.png"
+            Keys.onPressed: {
+                if (event.key == Qt.Key_O) {
+                    toggle(indicator48)
+                    releaseSwitch(indicator48)
+                }
+            }
+            MouseArea { anchors.fill: parent;
+                onClicked: {
+                    indicator48.focus = true
+                }
+            }
+        }
+        Image {
+            id: indicator33
+            x: 1160
+            y: 10
+            height: 30
+            width: 30
+            source: "assets/Asset 33.png"
+            Keys.onPressed: {
+                if (event.key == Qt.Key_G) {
+                    toggle(indicator33)
+                    releaseSwitch(indicator33)
+                }
+            }
+            MouseArea { anchors.fill: parent;
+                onClicked: {
+                    indicator33.focus = true
                 }
             }
         }
