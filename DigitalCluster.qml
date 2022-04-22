@@ -1,7 +1,7 @@
 import QtQuick 2.12
 import DigitalCluster 1.0
-import "cluster"
 import "controlPanel"
+import "cluster"
 
 Item {
     id: item1
@@ -22,9 +22,6 @@ Item {
         y: 719
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 1
-        onButtonsModesStateChanged: {
-            Themes.currentTheme = controlPanel.buttonsModesState
-        }
     }
 }
 

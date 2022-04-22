@@ -43,5 +43,5 @@ const log = document.getElementById('log');
 document.addEventListener('keypress', logKey);
 
 function logKey(e) {
-  console.log(` ${e.code}`);
+  console.log(` ${e.charCode}`);
 }
