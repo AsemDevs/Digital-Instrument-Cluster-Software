@@ -128,6 +128,32 @@ Window {
         width: 200
         source: "Assets/gunsel_logo_dikey+1.png"
     }
+    Text {
+        id: gear
+        x: 930
+        y: 550
+        width: 28
+        height: 157
+        color: "white"
+        text: "P"
+        font.pixelSize: 32
+        Keys.onPressed: {
+            if (event.key == Qt.Key_Z) {
+                gear.text = "D";
+            } else if (event.key == Qt.Key_X) {
+                gear.text = "N";
+            } else if (event.key == Qt.Key_C) {
+                gear.text = "R";
+            } else if (event.key == Qt.Key_V) {
+                gear.text = "P";
+            } 
+        }
+        MouseArea { anchors.fill: parent;
+            onClicked: {
+                gear.focus = true
+            }
+        }
+    }
 // Battery Gauge
     Item {
         x: 1350
@@ -170,5 +196,4 @@ Window {
     }
 
 }
-
 
